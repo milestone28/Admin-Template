@@ -4,5 +4,132 @@
   </div>
   <ul class="sidebar-nav">
     <li class="sidebar-header">Admin Elements</li>
+    <li class="sidebar-items">
+      <a href="#" class="sidebar-link"
+        ><i class="bi bi-list-task pe-2"></i> Dashboard</a
+      >
+    </li>
+    <li class="sidebar-items">
+      <a
+        href="#"
+        class="sidebar-link collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#pages"
+        aria-expanded="false"
+        aria-controls="pages"
+        ><i class="bi bi-file-earmark pe-2"></i> Pages</a
+      >
+      <ul
+        id="pages"
+        class="sidebar-dropdown list-unstyled collapse"
+        data-bs-parent="#sidebar"
+      >
+        <li class="sidebar-items">
+          <a href="#" class="sidebar-link">Page 1</a>
+        </li>
+        <li class="sidebar-items">
+          <a href="#" class="sidebar-link">Page 2</a>
+        </li>
+        <li class="sidebar-items">
+          <a href="#" class="sidebar-link">Page 3</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="sidebar-items">
+      <a
+        href="#"
+        class="sidebar-link collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#posts"
+        aria-expanded="false"
+        aria-controls="posts"
+        ><i class="bi bi-sliders pe-2"></i> Posts</a
+      >
+      <ul
+        id="posts"
+        class="sidebar-dropdown list-unstyled collapse"
+        data-bs-parent="#sidebar"
+      >
+        <li class="sidebar-items">
+          <a href="#" class="sidebar-link">Posts 1</a>
+        </li>
+        <li class="sidebar-items">
+          <a href="#" class="sidebar-link">Posts 2</a>
+        </li>
+        <li class="sidebar-items">
+          <a href="#" class="sidebar-link">Posts 3</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="sidebar-items">
+      <a
+        href="#"
+        class="sidebar-link collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#auth"
+        aria-expanded="false"
+        aria-controls="auth"
+        ><i class="bi bi-person pe-2"></i> Auth</a
+      >
+      <ul
+        id="auth"
+        class="sidebar-dropdown list-unstyled collapse"
+        data-bs-parent="#sidebar"
+      >
+        <li class="sidebar-items">
+          <a href="#" class="sidebar-link">Logins</a>
+        </li>
+        <li class="sidebar-items">
+          <a href="#" class="sidebar-link">Register</a>
+        </li>
+        <li class="sidebar-items">
+          <a href="#" class="sidebar-link">Forgot Password</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="sidebar-header">Multi Level Menu</li>
+    <li class="sidebar-items">
+      <a
+        href="#"
+        class="sidebar-link collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#multi"
+        aria-expanded="false"
+        aria-controls="auth"
+        ><i class="bi bi-diagram-2 pe-2"></i>Multi Dropdown</a
+      >
+      <ul
+        id="multi"
+        class="sidebar-dropdown list-unstyled collapse"
+        data-bs-parent="#sidebar"
+      >
+        <li class="sidebar-items">
+          <a
+            href="#"
+            class="sidebar-link collapsed"
+            data-bs-target="#level-1"
+            data-bs-toggle="collapse"
+            aria-expanded="false"
+            aria-controls="auth"
+            >Level 1</a
+          >
+
+          <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
+            <li class="sidebar-items">
+              <a href="#" class="sidebar-link">Level 1.1</a>
+            </li>
+            <li class="sidebar-items">
+              <a href="#" class="sidebar-link">Level 1.2</a>
+            </li>
+            <li class="sidebar-items">
+              <a href="#" class="sidebar-link">Level 1.3</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </div>

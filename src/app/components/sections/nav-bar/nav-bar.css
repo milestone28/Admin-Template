@@ -14,3 +14,18 @@
   right: -5px;
   display: block;
 } */
+
+.navbar {
+  width: 100%;
+}
+
+.avatar {
+  object-fit: cover;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}
+
+.navbar-expand .navbar-nav {
+  margin-left: auto;
+}

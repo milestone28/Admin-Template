@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { ToggleService } from '../../../shared/toggle';
 
 @Component({
   standalone: true,
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.css'
 })
+
 export class NavBar {
 
+  isSidebarOpen: boolean = false;
+  constructor(private toggleService: ToggleService) { }
+
+  toggleSidebar() {
+    this.toggleService.toggleSidebar();
+  }
 }

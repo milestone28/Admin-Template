@@ -26,8 +26,8 @@ li {
   list-style: none;
 }
 
-/* @media (min-width: 991.98px) {
-  main {
-    padding-left: 240px;
-  }
-} */
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.275rem;
+  color: var(--bs-emphasis-color);
+}

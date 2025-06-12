@@ -1,7 +1,11 @@
 <div class="wrapper">
-  <app-side-bar id="sidebar"></app-side-bar>
+  <app-side-bar
+    id="sidebar"
+    [ngClass]="isSidebarOpen ? '' : 'collapsed'"
+  ></app-side-bar>
   <main>
     <app-nav-bar class="navbar"></app-nav-bar>
+    <app-dashboard></app-dashboard>
     <router-outlet />
   </main>
 </div>
