@@ -6,11 +6,12 @@ import { Dashboard } from "./components/pages/dashboard/dashboard";
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { ToggleService } from './shared/toggle';
+import { Footer } from "./components/sections/footer/footer";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBar, SideBar, Dashboard, CommonModule],
+  imports: [RouterOutlet, NavBar, SideBar, CommonModule, Footer, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

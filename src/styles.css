@@ -13,6 +13,7 @@ body {
   overflow-y: scroll;
   margin: 0;
   background-color: #fbfbfb;
+  height: 100%;
 }
 
 a {
