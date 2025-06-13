@@ -14,9 +14,9 @@ declare var $: any;
 
 export class NavBar implements OnInit {
 
-  isSidebarOpen: boolean = true;
-  ToggleTheme: boolean = true;
-  isDesktop: boolean = true;
+  isSidebarOpen: boolean = false;
+  ToggleTheme: boolean = false;
+  isDesktop: boolean = false;
   private subscription: Subscription
 
   constructor(private toggleService: ToggleService) { }

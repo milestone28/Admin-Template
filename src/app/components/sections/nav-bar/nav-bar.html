@@ -12,7 +12,7 @@
   </button>
   <div
     class="navbar navbar-collapse"
-    [ngClass]="isSidebarOpen ? '' : 'collapsed'"
+    [ngClass]="isSidebarOpen ? 'collapsed' : ''"
   >
     <ul class="navbar-nav">
       <li
@@ -25,7 +25,7 @@
         <span class="m-auto">
           <i
             class="fs-6"
-            [ngClass]="ToggleTheme ? 'bi bi-moon-stars-fill' : ['bi bi-brightness-high-fill', 'text-secondary']"
+            [ngClass]="ToggleTheme ? ['bi bi-brightness-high-fill', 'text-secondary'] : 'bi bi-moon-stars-fill'"
           ></i>
         </span>
       </li>
@@ -46,7 +46,7 @@
           <span class="m-auto position-relative">
             <i
               class="bi bi-bell-fill fs-6"
-              [ngClass]="ToggleTheme ? '' : 'text-secondary'"
+              [ngClass]="ToggleTheme ? 'text-secondary' : ''"
             ></i>
             <span
               class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle"

@@ -6,9 +6,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ToggleService {
-  private isSidebarOpen = new BehaviorSubject<boolean>(true);
-  private isDesktop = new BehaviorSubject<boolean>(true);
-  private isDarkMode = new BehaviorSubject<boolean>(true);
+  private isSidebarOpen = new BehaviorSubject<boolean>(false);
+  private isDesktop = new BehaviorSubject<boolean>(false);
+  private isDarkMode = new BehaviorSubject<boolean>(false);
   constructor(private deviceService: DeviceDetectorService) {
     this.checkDevice();
   }

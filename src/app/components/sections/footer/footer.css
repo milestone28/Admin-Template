@@ -3,19 +3,40 @@
   position: fixed;
   width: 100%;
   text-align: center;
-  margin-left: -5%;
-  transition: all 0.3s ease-in-out;
-}
-
-.footer.collapsed {
   margin-left: 0;
   transition: all 0.3s ease-in-out;
 }
 
+.footer.collapsed {
+  margin-left: -5%;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .row {
+  width: 100vw;
+  margin-left: 0;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
-  .footer {
-    width: 100vw;
+  .footer.collapsed {
+    margin-left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer .row {
+    width: 100vw !important;
     position: relative;
     margin-left: 0;
+  }
+}
+@media (max-width: 1182px) {
+  .footer.collapsed {
+    margin-left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer {
+    position: relative;
+  }
+  .footer .row {
+    width: auto;
   }
 }

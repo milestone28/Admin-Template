@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBar } from "./components/sections/nav-bar/nav-bar";
 import { SideBar } from "./components/sections/side-bar/side-bar";
-import { Dashboard } from "./components/pages/dashboard/dashboard";
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { ToggleService } from './shared/toggle';
@@ -16,10 +15,8 @@ import { Footer } from "./components/sections/footer/footer";
   styleUrl: './app.css'
 })
 export class App implements OnInit {
-
-  isSidebarOpen: boolean = true;
-  isDesktopDevice: boolean = true;
-  ToggleTheme: boolean = true;
+  isDesktopDevice: boolean = false;
+  ToggleTheme: boolean = false;
   protected title = 'Admin Template';
   private subscription: Subscription
 
@@ -27,9 +24,6 @@ export class App implements OnInit {
   }
 
   ngOnInit(): void {
-    this.subscription = this.toggleService.sidebarState$.subscribe(
-      state => this.isSidebarOpen = state
-    );
     this.subscription = this.toggleService.isDesktopState$.subscribe(
       state => this.isDesktopDevice = state
     );
