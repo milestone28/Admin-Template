@@ -1,10 +1,21 @@
-@media (max-width: 767.98px) {
-  footer {
-    width: 100vw;
-  }
+.footer {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  margin-left: -5%;
+  transition: all 0.3s ease-in-out;
 }
 
-footer {
-  height: 100vh;
-  margin-top: auto;
+.footer.collapsed {
+  margin-left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    width: 100vw;
+    position: relative;
+    margin-left: 0;
+  }
 }

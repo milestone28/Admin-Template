@@ -9,7 +9,7 @@
 #sidebar {
   max-width: 264px;
   min-width: 264px;
-  background: var(--bs-dark);
+  background: #333446;
   transition: all 0.3s ease-in-out;
 }
 
@@ -24,6 +24,37 @@ main {
   background: var(--bs-dark-bg-subtle);
 }
 
+.content {
+  margin-top: 90px;
+}
+
 #sidebar.collapsed {
-  margin-left: -264px;
+  margin-left: -271px;
+}
+
+@media (max-width: 576px) {
+  #sidebar {
+    margin-left: -271px;
+  }
+  #sidebar.collapsed {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 769px) {
+  #sidebar {
+    margin-left: -271px;
+  }
+  #sidebar.collapsed {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1182px) {
+  #sidebar {
+    margin-left: -271px;
+  }
+  #sidebar.collapsed {
+    margin-left: 0;
+  }
 }

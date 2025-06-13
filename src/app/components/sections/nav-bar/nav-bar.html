@@ -1,16 +1,73 @@
-<nav class="navbar navbar-expand px-3 border-bottom">
+<nav class="navbar navbar-expand px-3 border-bottom position-fixed">
   <button
     class="btn"
     id="sidebar-toggle"
     type="button"
     (click)="toggleSidebar()"
+    data-bs-toggle="tooltip"
+    data-bs-placement="bottom"
+    data-bs-title="Sidebar"
   >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="navbar-collapse navbar">
+  <div
+    class="navbar navbar-collapse"
+    [ngClass]="isSidebarOpen ? '' : 'collapsed'"
+  >
     <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+      <li
+        class="nav-item me-1 d-flex align-items-center"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        data-bs-title="Change Theme"
+        (click)="toggleTheme()"
+      >
+        <span class="m-auto">
+          <i
+            class="fs-6"
+            [ngClass]="ToggleTheme ? 'bi bi-moon-stars-fill' : ['bi bi-brightness-high-fill', 'text-secondary']"
+          ></i>
+        </span>
+      </li>
+
+      <li
+        class="nav-item dropdown me-1 d-flex align-items-center"
+        data-bs-toggle="tooltip"
+        data-bs-placement="bottom"
+        data-bs-title="Notification"
+      >
+        <span
+          class="m-auto"
+          id="notificationsDropdown"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <span class="m-auto position-relative">
+            <i
+              class="bi bi-bell-fill fs-6"
+              [ngClass]="ToggleTheme ? '' : 'text-secondary'"
+            ></i>
+            <span
+              class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle"
+              >3</span
+            >
+          </span>
+        </span>
+
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="notificationsDropdown"
+        >
+          <li><a class="dropdown-item" href="#">Notification 1</a></li>
+          <li><a class="dropdown-item" href="#">Notification 2</a></li>
+          <li><a class="dropdown-item" href="#">Notification 3</a></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><a class="dropdown-item text-center" href="#">View All</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown d-flex align-items-center">
+        <a href="#" data-bs-toggle="dropdown" class="nav-icon m-auto">
           <img
             src="/images/my_profile.jpg"
             alt="Home"

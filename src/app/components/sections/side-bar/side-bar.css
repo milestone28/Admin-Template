@@ -38,7 +38,7 @@ a.sidebar-link {
   display: inline-block;
   padding: 2px;
   position: absolute;
-  right: 1.5rem;
+  right: -1.5rem;
   top: 1.4rem;
   transform: rotate(-135deg);
   transition: all 0.2s ease-in-out;

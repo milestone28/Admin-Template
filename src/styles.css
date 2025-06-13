@@ -12,7 +12,7 @@ body {
   opacity: 1;
   overflow-y: scroll;
   margin: 0;
-  background-color: #fbfbfb;
+  background-color: var(--bs-body-color);
   height: 100%;
 }
 

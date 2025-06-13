@@ -1,11 +1,12 @@
-<div class="wrapper">
+<div class="wrapper" [attr.data-bs-theme]="ToggleTheme ? 'light' : 'dark'">
   <app-side-bar
     id="sidebar"
     [ngClass]="isSidebarOpen ? '' : 'collapsed'"
   ></app-side-bar>
+
   <main>
-    <app-nav-bar class="navbar"></app-nav-bar>
-    <router-outlet />
+    <app-nav-bar></app-nav-bar>
+    <router-outlet class="content" />
     <app-footer></app-footer>
   </main>
 </div>

@@ -11,25 +11,37 @@ import { Footer } from "./components/sections/footer/footer";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBar, SideBar, CommonModule, Footer, Footer],
+  imports: [RouterOutlet, NavBar, SideBar, CommonModule, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App implements OnInit {
 
   isSidebarOpen: boolean = true;
+  isDesktopDevice: boolean = true;
+  ToggleTheme: boolean = true;
   protected title = 'Admin Template';
   private subscription: Subscription
 
-  constructor(private toggleService: ToggleService,) { }
+  constructor(private toggleService: ToggleService) {
+  }
 
   ngOnInit(): void {
     this.subscription = this.toggleService.sidebarState$.subscribe(
       state => this.isSidebarOpen = state
     );
+    this.subscription = this.toggleService.isDesktopState$.subscribe(
+      state => this.isDesktopDevice = state
+    );
+    this.subscription = this.toggleService.isDarkModeState$.subscribe(
+      state => this.ToggleTheme = state
+    );
+
   }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
+
+
 }
